@@ -18,8 +18,7 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def validate_data(df: pd.DataFrame) -> None:
-    # make sure at least one income column is there
-    has_income = "income" in df.columns
+    has_income = "annual_income" in df.columns or "income" in df.columns
     assert has_income, "No income column found"
     has_age = "age" in df.columns
     assert has_age, "No age column found"
