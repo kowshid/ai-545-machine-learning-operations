@@ -13,10 +13,26 @@ stages:
       size: 38
     - path: src/make_processed.py
       hash: md5
-      md5: d5c19e2e28c444660ee4f6e7b4e1599b
-      size: 503
+      md5: 947354aa4138a042448b6fd35677ca43
+      size: 504
     outs:
     - path: data/processed/customers_clean.csv
       hash: md5
       md5: 194ca66a53e578ad9a455141b57786e1
       size: 83
+  validate:
+    cmd: python src/validate.py
+    deps:
+    - path: data/processed/customers_clean.csv
+      hash: md5
+      md5: 194ca66a53e578ad9a455141b57786e1
+      size: 83
+    - path: src/validate.py
+      hash: md5
+      md5: 7eccfc34183d4cbc7fd2fd330a79dda7
+      size: 535
+    outs:
+    - path: reports/validation.txt
+      hash: md5
+      md5: 258452d4f51a919acd008c13268026bf
+      size: 70
