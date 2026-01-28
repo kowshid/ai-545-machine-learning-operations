@@ -3,6 +3,7 @@ stages:
     cmd: python src/make_processed.py
     deps:
     - data/raw/customers.csv
+    - params.yml
     - src/make_processed.py
     outs:
     - data/processed/customers_clean.csv

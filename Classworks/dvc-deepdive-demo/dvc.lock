@@ -5,14 +5,18 @@ stages:
     deps:
     - path: data/raw/customers.csv
       hash: md5
-      md5: 24f77cea9651f735044b0700f5f9bdc1
+      md5: 5b404a8b91107ded6120d62e8c01668d
       size: 96
+    - path: params.yml
+      hash: md5
+      md5: 8420cd503651beba3e9cfc079bde29ae
+      size: 38
     - path: src/make_processed.py
       hash: md5
-      md5: 4f50f95de8a6742692e1ec033fe4229f
-      size: 325
+      md5: d5c19e2e28c444660ee4f6e7b4e1599b
+      size: 503
     outs:
     - path: data/processed/customers_clean.csv
       hash: md5
-      md5: 24f77cea9651f735044b0700f5f9bdc1
-      size: 96
+      md5: 194ca66a53e578ad9a455141b57786e1
+      size: 83
