@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  process_data:
+    cmd: python src/make_processed.py
+    deps:
+    - path: data/raw/iris.csv
+      hash: md5
+      md5: c35bf510152295f3b99cdf48d6224483
+      size: 3976
+    - path: params.yml
+      hash: md5
+      md5: 892c1ed490e1cf3ec03ab3a38c9517a3
+      size: 78
+    - path: src/make_processed.py
+      hash: md5
+      md5: 8cf76d029bfe24d0fe336bbe8c728500
+      size: 1219
+    outs:
+    - path: data/processed/iris_cleaned.csv
+      hash: md5
+      md5: 5d354c51b75570e16964b2b9a619de40
+      size: 961

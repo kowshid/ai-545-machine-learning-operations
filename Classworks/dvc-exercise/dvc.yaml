@@ -1,0 +1,9 @@
+stages:
+  process_data:
+    cmd: python src/make_processed.py
+    deps:
+    - data/raw/iris.csv
+    - params.yml
+    - src/make_processed.py
+    outs:
+    - data/processed/iris_cleaned.csv
