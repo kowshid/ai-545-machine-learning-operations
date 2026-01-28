@@ -1,4 +1,4 @@
 cleaning:
-  max_petal_width: 0.2
+  max_petal_width: 0.1
   min_sepal_width: 3
   min_sepal_length: 6.5
