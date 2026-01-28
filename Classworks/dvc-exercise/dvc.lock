@@ -20,3 +20,19 @@ stages:
       hash: md5
       md5: 5d354c51b75570e16964b2b9a619de40
       size: 961
+  validate:
+    cmd: python src/validate.py
+    deps:
+    - path: data/processed/iris_cleaned.csv
+      hash: md5
+      md5: 5d354c51b75570e16964b2b9a619de40
+      size: 961
+    - path: src/validate.py
+      hash: md5
+      md5: 0828aaa71b0b352500695e55170478e3
+      size: 1223
+    outs:
+    - path: reports/metrics.json
+      hash: md5
+      md5: 6994c4e86e27ddc41e10385474fb409e
+      size: 2357

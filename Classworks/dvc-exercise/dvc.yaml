@@ -7,3 +7,10 @@ stages:
     - src/make_processed.py
     outs:
     - data/processed/iris_cleaned.csv
+  validate:
+    cmd: python src/validate.py
+    deps:
+    - data/processed/iris_cleaned.csv
+    - src/validate.py
+    outs:
+    - reports/metrics.json
