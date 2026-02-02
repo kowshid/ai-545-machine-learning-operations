@@ -1,0 +1,17 @@
+schema: '2.0'
+stages:
+  mlops:
+    cmd: python src/training.py
+    deps:
+    - path: data/data.csv
+      hash: md5
+      md5: 13078c30cdfc0522b4dc08ac7ad02736
+      size: 95
+    - path: params.yml
+      hash: md5
+      md5: 83fb240fae4541b391644576e3bd7b31
+      size: 95
+    - path: src/training.py
+      hash: md5
+      md5: 8353e36ccdd704dd1df7f9d50b55d37b
+      size: 1206

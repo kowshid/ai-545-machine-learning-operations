@@ -1,0 +1,7 @@
+stages:
+  mlops:
+    cmd: python src/training.py
+    deps:
+    - data/data.csv
+    - params.yml
+    - src/training.py
