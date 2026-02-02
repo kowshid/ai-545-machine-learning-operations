@@ -42,3 +42,4 @@ venv/
 *.key
 .localstack
 postgres_data/
+mlartifacts/
