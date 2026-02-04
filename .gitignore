@@ -43,3 +43,4 @@ venv/
 .localstack
 postgres_data/
 mlartifacts/
+*.db

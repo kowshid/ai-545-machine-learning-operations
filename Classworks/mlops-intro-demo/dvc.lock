@@ -9,9 +9,9 @@ stages:
       size: 95
     - path: params.yml
       hash: md5
-      md5: 83fb240fae4541b391644576e3bd7b31
-      size: 95
+      md5: 0b1d4947fb7e82977b144613ab3b0335
+      size: 112
     - path: src/training.py
       hash: md5
-      md5: 8353e36ccdd704dd1df7f9d50b55d37b
-      size: 1206
+      md5: cfa70ec064514aeb92a88bb66c0b45fb
+      size: 1509
