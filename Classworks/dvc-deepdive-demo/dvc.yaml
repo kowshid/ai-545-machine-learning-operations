@@ -2,15 +2,15 @@ stages:
   process_data:
     cmd: python src/make_processed.py
     deps:
-    - data/raw/customers.csv
-    - params.yml
-    - src/make_processed.py
+      - data/raw/customers.csv
+      - params.yml
+      - src/make_processed.py
     outs:
-    - data/processed/customers_clean.csv
+      - data/processed/customers_clean.csv
   validate:
     cmd: python src/validate.py
     deps:
-    - data/processed/customers_clean.csv
-    - src/validate.py
+      - data/processed/customers_clean.csv
+      - src/validate.py
     outs:
-    - reports/validation.txt
+      - reports/validation.txt

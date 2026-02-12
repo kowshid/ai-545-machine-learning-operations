@@ -5,9 +5,10 @@
 # "sepal.length","sepal.width","petal.length","petal.width","variety"
 
 
+from pathlib import Path
+
 import pandas as pd
 import yaml
-from pathlib import Path
 
 RAW = Path("data/raw/iris.csv")
 OUT = Path("data/processed/iris_cleaned.csv")

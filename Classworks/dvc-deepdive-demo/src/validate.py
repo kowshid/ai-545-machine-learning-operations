@@ -1,5 +1,6 @@
-import pandas as pd
 from pathlib import Path
+
+import pandas as pd
 
 DATA = Path("data/processed/customers_clean.csv")
 OUT = Path("reports/validation.txt")

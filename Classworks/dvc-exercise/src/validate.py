@@ -1,10 +1,10 @@
-import pandas as pd
 import json
 from pathlib import Path
 
+import pandas as pd
+
 INPUT_FILE = Path("data/processed/iris_cleaned.csv")
 OUTPUT_FILE = Path("reports/metrics.json")
-
 
 df = pd.read_csv(INPUT_FILE)
 
