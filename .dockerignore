@@ -1,0 +1,17 @@
+# .dockerignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.git/
+.gitignore
+# MLflow artifacts and DB (we’re only shipping model.pkl)
+mlruns/
+mlflow.db
+data/
+datasets/
+*.ipynb
+*.log
+.DS_Store
