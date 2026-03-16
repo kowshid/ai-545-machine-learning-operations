@@ -1,0 +1,55 @@
+name: ML Pipeline with GitHub Actions
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  train-evaluate-register:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run training pipeline
+        run: |
+          python Classworks/github-actions-demo-2/src/train.py
+
+      - name: Show generated files
+        run: |
+          ls -R Classworks/github-actions-demo-2
+          echo "----- metrics.json -----"
+          cat outputs/metrics.json
+          echo "----- champion.json -----"
+          cat registry/champion.json
+
+      - name: Upload model artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: trained-model
+          path: outputs/model.pkl
+
+      - name: Upload metrics artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: model-metrics
+          path: outputs/metrics.json
+
+      - name: Upload registry artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: model-registry
+          path: registry/champion.json
