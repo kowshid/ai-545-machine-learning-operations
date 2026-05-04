@@ -11,8 +11,8 @@ versioning, model governance, and infrastructure automation for scalable AI depl
 ## Tools & Technologies
 
 - Programming languages: Python
-- Topics: To be added
-- Tools: To be added
+- Topics: MLOps Foundation, Data versioning, DVC, MLFlow, Docker, Containerization, Docker, CI/CD, Git Actions,
+  Orchestration, Kubernetes, ML Observability, Prometheus, Grafana
 
 ## Course Information
 
