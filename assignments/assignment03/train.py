@@ -1,11 +1,10 @@
 # train.py
-import mlflow
 import mlflow.sklearn
 from sklearn.datasets import load_breast_cancer
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import recall_score, accuracy_score
-from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import recall_score, accuracy_score
+from sklearn.model_selection import train_test_split
 
 mlflow.set_tracking_uri("http://127.0.0.1:5000")
 EXPERIMENT_NAME = "breast_cancer_classification"

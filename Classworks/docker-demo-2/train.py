@@ -1,9 +1,9 @@
 import mlflow.sklearn
 from sklearn.datasets import load_breast_cancer
-from sklearn.svm import SVC  # Changed from RandomForest
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC  # Changed from RandomForest
 
 mlflow.set_experiment("breast_cancer_experiment")
 

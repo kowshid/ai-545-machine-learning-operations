@@ -1,7 +1,6 @@
 import warnings
 
 import joblib
-import mlflow
 import numpy as np
 from fastapi import FastAPI
 from pydantic import BaseModel

@@ -1,8 +1,9 @@
-from fastapi import FastAPI
-import time
 import random
-from prometheus_client import Counter, Histogram, generate_latest
+import time
+
+from fastapi import FastAPI
 from fastapi.responses import Response
+from prometheus_client import Counter, Histogram, generate_latest
 
 app = FastAPI()
 

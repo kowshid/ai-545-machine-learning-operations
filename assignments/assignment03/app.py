@@ -1,18 +1,21 @@
 # app.py
-from fastapi import FastAPI
-from pydantic import BaseModel
 import joblib
 import numpy as np
+from fastapi import FastAPI
+from pydantic import BaseModel
 
 app = FastAPI()
 model = joblib.load("model.pkl")
 
+
 class PredictionRequest(BaseModel):
     features: list[float]  # 30 features for breast cancer dataset
+
 
 @app.get("/")
 def root():
     return {"message": "Breast Cancer Inference Service"}
+
 
 @app.post("/predict")
 def predict(request: PredictionRequest):

@@ -1,7 +1,7 @@
 import joblib
 import mlflow.sklearn
 
-MODEL_NAME = "BreastCancerSVC" # Updated to match previous step
+MODEL_NAME = "BreastCancerSVC"  # Updated to match previous step
 MODEL_ALIAS = "champion"
 model_uri = f"models:/{MODEL_NAME}@{MODEL_ALIAS}"
 

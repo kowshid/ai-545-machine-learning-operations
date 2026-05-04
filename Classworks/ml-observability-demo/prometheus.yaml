@@ -8,7 +8,7 @@ metadata:
     app.kubernetes.io/component: server
 data:
   alerting_rules.yml: |
-    {}
+    { }
   alerts: |
     {}
   allow-snippet-annotations: "false"
@@ -36,7 +36,7 @@ data:
 
       - job_name: 'ml-api'
         static_configs:
-          - targets: ['ml-api-service:8000']
+          - targets: [ 'ml-api-service:8000' ]
 
       - job_name: 'kubernetes-nodes'
         bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
@@ -144,16 +144,16 @@ data:
             ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
           bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
           relabel_configs:
-            - source_labels: [__meta_kubernetes_namespace]
+            - source_labels: [ __meta_kubernetes_namespace ]
               regex: default
               action: keep
-            - source_labels: [__meta_kubernetes_pod_label_app_kubernetes_io_name]
+            - source_labels: [ __meta_kubernetes_pod_label_app_kubernetes_io_name ]
               regex: alertmanager
               action: keep
-            - source_labels: [__meta_kubernetes_pod_container_port_number]
+            - source_labels: [ __meta_kubernetes_pod_container_port_number ]
               regex: "9093"
               action: keep
   recording_rules.yml: |
-    {}
+    { }
   rules: |
     {}
